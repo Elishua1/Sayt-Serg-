@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="max-image-preview:large" />
+    <link rel="stylesheet" href="/CSS/(3D Print Manual).css" />
+    <title>FaceGen 3D Print Manual</title>
+    <meta
+      name="description"
+      content="FaceGen 3D Print software manual (documentation)"
+    />
+  </head>
+
+  <body>
+    <nav style="background-color: #4471af; font-size: 3vw; width: 100%">
+      <div style="height: 5px"></div>
+      <ul class="ul">
+        <li style="display: table-cell; width: 18%">
+          <a style="color: #ffffff" href="(Home).html">Home</a>
+        </li>
+        <li style="display: table-cell; width: 22%">
+          <a style="color: #ffffff" href="(Products).html">Products</a>
+        </li>
+        <li style="display: table-cell; width: 21%">
+          <a style="color: #ffffff" href="(Support).html">Support</a>
+        </li>
+        <li style="display: table-cell; width: 18%">
+          <a style="color: #ffffff" href="(About).html">About</a>
+        </li>
+        <li style="display: table-cell; width: 20%">
+          <a style="color: #ffffff" href="(Contact).html">Contact</a>
+        </li>
+      </ul>
+      <div style="height: 5px"></div>
+    </nav>
+
+    <section>
+      <h1 style="font-size: 60px">
+        <span style="color: #cccccc"
+          ><span style="color: #4471af">F</span>ace<span style="color: #4471af"
+            >G</span
+          >en</span
+        >
+        3D Print Manual
+      </h1>
+      <h2><a href="(Viewport).html">Viewport</a></h2>
+      <h2>Create Tab</h2>
+      <h3><a href="(Create → Photo).html">Create &rarr; Photo</a></h3>
+      <h2>Parts Tab</h2>
+      <h3>Custom Parts</h3>
+      <p>
+        To create a custom part, first create the base head:
+        <span>Modify</span> &rarr; <span>Shape</span> &rarr;
+        <span>Symmetric</span> &rarr; <span>Set All To Zero</span>, and the same
+        for <span>Asymmetric</span>. Export (<span>File</span> &rarr;
+        <span>Export</span>) and use this as a guide for your custom part.
+      </p>
+      <p>To integrate your custom part back into FaceGen you can either:</p>
+      <p>
+        1. If you're willing to share your part with other users, email it to
+        support@facegen.com and we'll integrate it for you and include it in
+        later releases.
+      </p>
+
+      <p>
+        2. Request an evaluation of the redistribution tools (or purchase
+        FaceGen Modeller Enterprise) and follow the instructions for integration
+        of a new model part.
+      </p>
+
+      <h3>Custom Color Maps (Pro only)</h3>
+      <p>
+        To customize the color texture images, first make a copy of this
+        directory:<br />
+      </p>
+      <p>
+        <code>\Program Files\FaceGen\3D Print Pro 2\data\csam\3DPrint</code>
+        &nbsp; (64bit)<br />
+        <code
+          >\Program Files (x86)\FaceGen\3D Print Pro 2\data\csam\3DPrint</code
+        >
+        &nbsp; (32bit)
+      </p>
+
+      <p>And paste it into:</p>
+      <p>
+        <code>C:\Users\&lt;USERNAME&gt;\Documents\FaceGen\Model Sets\</code>
+      </p>
+      <p>
+        Restart FaceGen 3D Print and the new model set will appear as a tab.
+      </p>
+      <p>
+        Within the <code>3DPrint</code> directory, parts are grouped into
+        sub-directories. Within each sub-directory (group), parts are identified
+        by a .TXT file containing the name of the part. A corresponding image
+        file (JPG, BMP, PNG or TGA) represents skin color, if applicable.
+        Corresponding files with the name
+        <code>&lt;FILE&gt;_&lt;COLOR&gt;</code> represent the various color
+        texture options, which appear as selections labelled
+        <code>&lt;COLOR&gt;</code> in FaceGen. You can add to, remove from, or
+        edit these files. Be aware that FaceGen makes use of the alpha channel
+        in these images for transparency.
+      </p>
+      <h2>File Tab</h2>
+      <h3>File &rarr; Export</h3>
+      <h4>Hollowing</h4>
+      <p>
+        If you are only printing the head with no hair or stand, select
+        <span>Parts</span> &rarr; <span>Head</span> &rarr; <span>Hollow</span>.
+        Adjust wall thickness: <span>Expression</span> &rarr;
+        <span>Head: Wall Thickness</span>.
+      </p>
+
+      <p>
+        If you are including a hairstyle or stand, select select
+        <span>Parts</span> &rarr; <span>Head</span> &rarr;
+        <span>Solid</span> (along with the other parts), then export to OBJ
+        format. Import into <a href="">Autodesk Meshmixer</a> (free). Rotate to
+        the upright orientation (<span>Edit</span> tools
+        <span>Transform</span>). Merge all meshes into a single solid (<span
+          >Edit</span
+        >
+        tools <span>Make Solid</span>). Hollow out the solid (<span>Edit</span>
+        tools <span>Hollow</span>). You can specify the wall thickness,
+        accuracy, hole size etc.
+      </p>
+
+      <p>
+        If you are printing with color maps, try out
+        <a href="">Sculpteo</a>'s automatic hollowing function, or the
+        <span>Intersecting</span> and <span>Hollowing</span> functions on the
+        <a href="">MakePrintable</a> service.
+      </p>
+      <h2><a href="">License & Legal</a></h2>
+      <h2>Troubleshooting</h2>
+      <h3>There is no face in the viewport</h3>
+      <p><span>Help</span> &rarr; <span>Reset all settings to default</span></p>
+      <h3>Program will not start</h3>
+      <ul style="text-align: left; color: #f57a29">
+        <li>
+          <span style="color: #000000"
+            >Delete: <code>C:\Users\USERNAME\AppData\Local\FaceGen\</code></span
+          >
+        </li>
+        <li><span style="color: #000000">Restart</span></li>
+      </ul>
+      <h3>
+        Program icon appears in the taskbar but is not visible on the screen
+      </h3>
+      <p>
+        First, click on the program in the taskbar to ensure the program is not
+        just minimized.
+      </p>
+      <p>
+        If you have changed your monitor(s) or GPU drivers recently, the program
+        may be outside the screen area:
+      </p>
+      <ul style="text-align: left; color: #f57a29">
+        <li>
+          <span style="color: #000000"
+            >Right-click on the program in the task bar and select
+            <span>Close window</span></span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            >Delete: <code>C:\Users\USERNAME\AppData\Local\FaceGen\</code></span
+          >
+        </li>
+        <li><span style="color: #000000">Restart</span></li>
+      </ul>
+      <h3>Program closes</h3>
+      <p>
+        If you see the message
+        <span>FaceGen ... has stopped working ... will close</span>
+        <a href="">click here</a> for more details.
+      </p>
+      <h3>WHEA_UNCORRECTABLE_ERROR bluescreen</h3>
+      <p>
+        This is a hardware error in your computer which may be caused by a
+        faulty power supply. It can occur during
+        <span>Create from photo(s)</span> because this calculation requires
+        maximum use of your CPU.
+      </p>
+
+      <h2>Recent Version History</h2>
+      <h3>2.5</h3>
+      <ul style="text-align: left; color: #f57a29">
+        <li>
+          <span style="color: #000000"
+            ><span>Create</span> &rarr; <span>Scan</span> creates face shape
+            from 3D scan mesh (or other mesh)</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000">Minor fixes and improvements</span>
+        </li>
+      </ul>
+      <h3>2.4</h3>
+      <ul style="text-align: left; color: #f57a29">
+        <li>
+          <span style="color: #000000">faster smoother slider adjustments</span>
+        </li>
+        <li>
+          <span style="color: #000000">.FG file drag and drop support</span>
+        </li>
+        <li>
+          <span style="color: #000000"
+            ><span>File</span> &rarr; <span>Image</span> transparent background
+            option</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            >rename <span>About</span> to <span>Help</span> and add
+            <span>Reset all</span> button</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            >more <span>View</span> &rarr; <span>Render</span> options</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            >rename <span>Generate</span> tab to <span>New</span></span
+          >
+        </li>
+        <li>
+          <span style="color: #000000">Small fixes and improvements</span>
+        </li>
+      </ul>
+      <h3>2.3</h3>
+      <ul style="text-align: left; color: #f57a29">
+        <li>
+          <span style="color: #000000"
+            >fix internal error with face changes</span
+          >
+        </li>
+        <li><span style="color: #000000">fix export scaling to work</span></li>
+        <li>
+          <span style="color: #000000">fix subdivision to support UVs</span>
+        </li>
+        <li>
+          <span style="color: #000000"
+            >improve solid head mesh to avoid thin triangles in base</span
+          >
+        </li>
+        <li><span style="color: #000000">minor fixes</span></li>
+      </ul>
+      <h3>2.1</h3>
+      <ul style="text-align: left; color: #f57a29">
+        <li><span style="color: #000000">Add genetic interface</span></li>
+        <li>
+          <span style="color: #000000"
+            >Add visual thumbnails to texture detail selection</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            >Add variance sliders to random generate</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000">Save image with custom pixel size</span>
+        </li>
+        <li><span style="color: #000000">Fix roman hairstyle</span></li>
+        <li><span style="color: #000000">fix file open dialog error</span></li>
+        <li>
+          <span style="color: #000000">switch to Direct3D 11 rendering</span>
+        </li>
+        <li><span style="color: #000000">minor fixes</span></li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <div style="height: 1px"></div>
+      <p>&copy; Singular Inversions 2022</p>
+      <div style="height: 1px"></div>
+    </footer>
+  </body>
+</html>

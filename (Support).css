@@ -1,0 +1,30 @@
+body {
+  text-align: center;
+  font-size: 150%;
+  text-size-adjust: none;
+  margin: 0px;
+}
+section {
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+a {
+  text-align: center;
+  text-decoration: none;
+}
+.ul {
+  text-align: center;
+  display: table;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #ffffff;
+}
+.footer {
+  text-align: center;
+  background-color: #4471af;
+  color: #ffffff;
+  width: 100%;
+}

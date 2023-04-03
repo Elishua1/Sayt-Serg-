@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="robots" content="max-image-preview:large">
+<link rel="stylesheet" href="/CSS/(Create → Photo).css">
+<title>FaceGen Create Photo</title>
+<meta name="description" content="How to take the best face photos for use with FaceGen">
+</head>
+
+<body>
+<nav style="background-color:#4471AF; font-size:3vw; width:100%">
+<div style="height:5px"></div>
+<ul style="display:table; width:90%; margin-left:auto; margin-right:auto; color:#FFFFFF">
+  <li style="display:table-cell; width:18%"><a style="color:#FFFFFF" href="(Home).html">Home</a></li>
+  <li style="display:table-cell; width:22%"><a style="color:#FFFFFF" href="(Products).html">Products</a></li>
+  <li style="display:table-cell; width:21%"><a style="color:#FFFFFF" href="(Support).html">Support</a></li>
+  <li style="display:table-cell; width:18%"><a style="color:#FFFFFF" href="(About).html">About</a></li>
+  <li style="display:table-cell; width:20%"><a style="color:#FFFFFF" href="(Contact).html">Contact</a></li>
+</ul>
+<div style="height:5px"></div>
+</nav>
+
+<section>
+<h1 style="font-size:50px"><span style="color:#CCCCCC"><span style="color:#4471AF">F</span>ace<span style="color:#4471AF">G</span>en</span> Create &rarr; Photo</h1>
+<h2>Taking your photo(s)</h2>
+
+<ul style="text-align:left; color:#F57A29">
+  <li><span style="color:#000000">Important</span></li>
+  
+<ul style="text-align:left; color:#F57A29">
+  <li><span style="color:#000000">Mouth closed, neutral expression</span></li>
+  <li><span style="color:#000000">Eyes looking straight ahead</span></li>
+  <li><span style="color:#000000">Camera flash lighting indoors</span></li>
+  <li><span style="color:#000000">No hair on lower forehead</span></li>
+</ul>
+  <li><span style="color:#000000">Helpful</span></li>
+  
+<ul style="text-align:left; color:#F57A29">
+  <li><span style="color:#000000">Age 12 or older</span></li>
+  <li><span style="color:#000000">Head not tilted downward (bit upward is OK) </span></li>
+</ul>
+  <li><span style="color:#000000">Bad</span></li>
+  
+<ul style="text-align:left; color:#F57A29">
+  <li><span style="color:#000000">Glasses</span></li>
+  <li><span style="color:#000000">Long facial hair (stubble is OK) </span></li>
+</ul>
+</ul>
+<p>Large source photos will result in high resolution albedo map images but also slow updates
+ with the various face controls. The maximum albedo map size that can result is 2048x2048 for 32-bit versions and
+ 4096x4096 for 64-bit versions.</p>
+<h2>Placing the points</h2>
+<p>For best results, try to place points as follows:</p>
+<table style="border:1px solid #F57A29; border-style:double">
+    <tr>
+      <td class="td" >
+        <img src="" alt="face photo eye landmarks" width="314" height="268">
+        <p>Eye centres on the pupils.</p>
+      </td>
+      <td class="td">
+        <img src="" alt="face photo cheekbone landmarks" width="314" height="268">
+        <p>Outer edges of the cheekbones.
+      </td>
+    </tr>
+    <tr>
+      <td class="td" >
+        <img src="" alt="face photo nose flap landmarks" width="314" height="268">
+        <p>Outer edges of the nose flaps.
+      </td>
+      <td class="td" >
+        <img src="" alt="face photo mouth corner landmarks" width="314" height="268">
+        <p>Mouth corners.
+      </td>
+    </tr>
+    <tr>
+      <td class="td" >
+        <img src="" alt="face photo jaw corner landmarks" width="314" height="268">
+        <p>Outer edges of jaw corners. For a face looking straight ahead this is usually roughly level with the
+        mouth points.
+      </td>
+      <td class="td">
+        <img src="" alt="face photo chin bottom landmark" width="314" height="268">
+        <p>Bottom edge of chin.
+      </td>
+    </tr>
+</table>
+<h2>Options</h2>
+<p>If you have added profile photos you have 2 additional options.</p>
+<p>The first option allows you to ignore the profile photos themselves and only use the points you have
+  selected on them. This is useful if the
+  lighting of your profile photos differs from the frontal photo, as FaceGen is not designed to match the
+  same face to two different lightings.</p>
+<p>If you haven't selected the first option, then the second option allows you to further make use of the
+profile photo for extracting texture details (skin texture, hairs, etc.) from the profile photos.</p>
+<h2>Face Partially Obscured</h2>
+<p>If you have a photo in which the face is partially obscured, for instance by glasses or hair, you can
+   do the following:</p>
+<ul style="text-align:left; color:#F57A29">
+  <li><span style="color:#000000">In an image editor, paint over the obscuring areas with pure green (RGB=0,255,0), then save to a lossless image format (eg. PNG).</span></li>
+  <li><span style="color:#000000">In Modeller, when you use that image for the photofit, it will ignore all pixels which are pure green and reconstruct the hidden areas.</span></li>
+</ul>
+</ul>
+</section>
+
+<footer class="footer" >
+<div style="height:1px"></div>
+<p>&copy; Singular Inversions 2022
+<div style="height:1px"></div>
+</footer>
+</body>
+</html>

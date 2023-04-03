@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="robots" content="max-image-preview:large">
+<link rel="stylesheet" href="/CSS/(Free).css">
+<title>FaceGen SDK Products</title>
+<meta name="description" content="Integrate FaceGen technology into your software product">
+</head>
+
+<body>
+<nav style="background-color:#4471AF; font-size:3vw; width:100%">
+<div style="height:5px"></div>
+<ul style="display:table; width:90%; margin-left:auto; margin-right:auto; color:#FFFFFF">
+  <li style="display:table-cell; width:18%"><a style="color:#FFFFFF" href="(Home).html">Home</a></li>
+  <li style="display:table-cell; width:22%"><a style="color:#FFFFFF" href="(Products).html">Products</a></li>
+  <li style="display:table-cell; width:21%"><a style="color:#FFFFFF" href="(Support).html">Support</a></li>
+  <li style="display:table-cell; width:18%"><a style="color:#FFFFFF" href="(About).html">About</a></li>
+  <li style="display:table-cell; width:20%"><a style="color:#FFFFFF" href="(Contact).html">Contact</a></li>
+</ul>
+<div style="height:5px"></div>
+</nav>
+
+<section>
+<p></p>
+
+<table class="table">
+  <tr>
+    <td><img src="" alt="FaceGen SDK Products icon" width="100" height="100"></td>
+    <td>
+      <span class="span2">
+        <span style="color:#CCCCCC"><span style="color:#4471AF">F</span>ace<span style="color:#4471AF">G</span>en</span>
+        SDK Products
+      </span>
+      <br><span style="font-style:italic">Integrate FaceGen technology into your software.</span>
+    </td>
+    <td style="float:right">
+    
+    <table>
+    </table>
+    </td>
+  </tr>
+</table>
+<p></p>
+
+</section>
+<section class="body">
+<h2>Overview</h2>
+<p>
+<ul class="ul1">
+  <li><span style="color:#000000">Main SDK</span></li>
+  
+<ul class="ul1">
+  <li><span style="color:#000000">Create faces with age, race, gender, shape and color controls</span></li>
+  <li><span style="color:#000000">Create random realistic faces at run-time</span></li>
+  <li><span style="color:#000000">Load faces created using FaceGen Windows products (free or otherwise) </span></li>
+  <li><span style="color:#000000">Code faces in 130 bytes for low bandwidth applications</span></li>
+  <li><span style="color:#000000">Integrate FaceGen into your content creation pipeline</span></li>
+</ul>
+  <li><span style="color:#000000">Full SDK</span></li>
+  
+<ul class="ul1">
+  <li><span style="color:#000000">Create a FaceGen-coded face from one or more photos</span></li>
+  <li><span style="color:#000000">Includes the Main SDK and works in combination with it</span></li>
+  <li><span style="color:#000000">Takes about 10 seconds per photo on a modern CPU</span></li>
+</ul>
+</ul>
+<p>Both SDKs come with full C++14 source code and compile on Windows, MacOS, Linux, iOS and Android. 
+<p>FaceGen SDKs have been licensed for games, avatars, marketing campaigns, university research,
+ 3D authoring tools, face recognition training and medical visualization.</p>
+<p>The Main SDK gives your end users all of the face controls seen in FaceGen Modeller so they can create and edit
+ their own faces from scratch or edit faces from the PhotoFit. It includes tools for integration of custom mesh
+ and UV layouts, and a tool for automatically rendering large numbers of random face images based on custom
+ range settings.</p>
+<p>FaceGen is designed so that animation morphs will automatically conform to any face you create.</p>
+<h2>Design</h2>
+<p>Faces are created or modified according to the various parametric controls, and represented by a 130-number
+ coordinate vector in "face space" (these are the same numbers stored in a FaceGen FG file). In the controls
+ step, the face is manipulated in face space:</p>
+<p style="text-align:center"><img src="" alt="Image" width="375" height="137"></p>
+<p>In the construct step, a face space coordinate is used to construct a 3D textured model:</p>
+<p style="text-align:center"><img src="" alt="Image" width="375" height="120"></p>
+<p>The construct step is repeated for every model which must fit seamlessly with the face; a hairstyle and
+ glasses for instance.</p>
+<h2>Dataflow</h2>
+<p style="text-align:center"><img src="" alt="Image" width="500" height="440"></p>
+<h2>Integration</h2>
+<p>The output of the FaceGen construction stage is an updated list of vertex positions and/or a new
+ texture image.</p>
+<p>FaceGen shape statistics always leave the neck seam unchanged for seamless stitching to the body.</p>
+<p>A skin colour texture can be generated for the torso or body, in order to create a seamless match.</p>
+<p>If you prefer to put your hair, helmet, etc. into the head texture rather than a separate model, it can be
+ composited directly onto FaceGen's skin-coloured output.</p>
+<p>The vertex positions output from FaceGen can be used to update any kind of positional information. For instance,
+ vertices can be used to define bone positions as well as polygonal vertices. Once the new vertex positions have
+ been computed with FaceGen, they can be applied to your proprietary structure (polygonal, subdivision, bones,
+ etc.) since the vertex ordering remains unchanged.</p>
+<p>Information on <a href="animate.htm">related products.</a></p>
+<h2>Competitive Analysis</h2>
+<h3>Main SDK</h3>
+<p>The statistically derived face shape and coloring controls in the Main SDK are unique in the market.
+ Here is a comparison with artistically created controls:</p>
+<p>
+<ul class="ul1">
+  <li><span style="color:#000000">Pros</span></li>
+  
+<ul class="ul1">
+  <li><span style="color:#000000">Greater realism</span></li>
+  <li><span style="color:#000000">Innovative face-editing controls</span></li>
+  
+<ul style="text-align:left; color:#F57A29">
+  <li><span style="color:#000000">Click and drag interactive shape edit</span></li>
+  <li><span style="color:#000000">Genetic interface</span></li>
+  <li><span style="color:#000000">Age, race gender and 150 other parameters</span></li>
+  <li><span style="color:#000000">Random face creation with or without constraints</span></li>
+  <li><span style="color:#000000">Caricature and asymmetry parameters</span></li>
+</ul>
+  <li><span style="color:#000000">Can be applied to custom mesh topologies and UV layouts</span></li>
+</ul>
+  <li><span style="color:#000000">Cons</span></li>
+  
+<ul class="ul1">
+  <li><span style="color:#000000">Greater computational requirements</span></li>
+  <li><span style="color:#000000">Controls lack small shape details such as nose tip shape and wrinkles (although these can be added by traditional means) </span></li>
+</ul>
+</ul>
+<h3>Full SDK (Main SDK + Photofit)</h3>
+<p>Our approach of fitting a 3D statistical model to a photograph is unique in the market.
+ Other solutions use photo mapping, in which the final texture is a composite of the photographs.
+ Here's how our approach compares:</p>
+<p>
+<ul class="ul1">
+  <li><span style="color:#000000">Pros</span></li>
+  
+<ul class="ul1">
+  <li><span style="color:#000000">Greater realism when seen from angles significantly different than the photograph(s) </span></li>
+  <li><span style="color:#000000">Can be combined with our face-editing controls</span></li>
+  <li><span style="color:#000000">Can be applied to custom mesh topologies and UV layouts</span></li>
+  <li><span style="color:#000000">Creates a bald head which can be used with any hairstyle</span></li>
+  <li><span style="color:#000000">Very low bandwidth coding of unique shape and color</span></li>
+</ul>
+  <li><span style="color:#000000">Cons</span></li>
+  
+<ul class="ul1">
+  <li><span style="color:#000000">Requires passport-style photos (neutral expression, front or side pose, frontal lighting) </span></li>
+  <li><span style="color:#000000">Cannot use the hair in the photograph</span></li>
+  <li><span style="color:#000000">If you don't need a fully rotatable model, methods that modify the original image (eg. augmented reality) can look more realistic</span></li>
+</ul>
+</ul></p>
+<h2>Other Uses</h2>
+<p>The Main SDK comes with a full-source command-line tool for the automatic generation of random face images (or meshes),
+   saved to files, with adjustable parameter ranges for pose, camera intrinsics, lighting, facial identity,
+   facial expression and hairstyle. Corresponding CSV files can also be generated containing the projected coordinates
+   of any desired points on the face.
+   Many organizations have found this useful for generating training sets, and test sets which vary specific parameters.</p>
+<p> We also have technology for reconstructing shape from depth / range cameras and dense 3D scan meshes.
+<h2>More Information</h2>
+<p>Email us (<a href="mailto:partner@facegen.com?SdkInfo">partner@facegen.com</a>) for documentation, API,
+ pricing, and any questions.</p>
+</section>
+
+<footer class="footer">
+<div style="height:1px"></div>
+<p>&copy; Singular Inversions 2022
+<div style="height:1px"></div>
+</footer>
+</body>
+</html>

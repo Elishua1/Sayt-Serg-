@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="max-image-preview:large" />
+    <link rel="stylesheet" href="/CSS/(3D Print Manual).css" />
+    <title>FaceGen Modeller Manual</title>
+    <meta
+      name="description"
+      content="FaceGen Modeller software manual (documentation)"
+    />
+  </head>
+
+  <body>
+    <nav style="background-color: #4471af; font-size: 3vw; width: 100%">
+      <div style="height: 5px"></div>
+      <ul class="ul">
+        <li style="display: table-cell; width: 18%">
+          <a style="color: #ffffff" href="(Home).html">Home</a>
+        </li>
+        <li style="display: table-cell; width: 22%">
+          <a style="color: #ffffff" href="(Products).html">Products</a>
+        </li>
+        <li style="display: table-cell; width: 21%">
+          <a style="color: #ffffff" href="(Support).html">Support</a>
+        </li>
+        <li style="display: table-cell; width: 18%">
+          <a style="color: #ffffff" href="(About).html">About</a>
+        </li>
+        <li style="display: table-cell; width: 20%">
+          <a style="color: #ffffff" href="(Contact).html">Contact</a>
+        </li>
+      </ul>
+      <div style="height: 5px"></div>
+    </nav>
+
+    <section>
+      <h1 style="font-size: 60px">
+        <span style="color: #cccccc"
+          ><span style="color: #4471af">F</span>ace<span style="color: #4471af"
+            >G</span
+          >en</span
+        >
+        Modeller Manual
+      </h1>
+      <h2><a href="(Viewport).html">Viewport</a></h2>
+      <h2>Create Tab</h2>
+      <h3><a href="(Create → Photo).html">Create &rarr; Photo</a></h3>
+      <h2>Modify Tab</h2>
+      <p>
+        The demographics, shape and color controls are statistically derived
+        from hundreds of high-resolution 3D scans of human faces. They are all
+        statistically related so moving any one will affect others to some
+        extent; there is no way to avoid this.
+      </p>
+      <h2>Models Tab</h2>
+      <h3><a href="modeller_sets.htm">Model Set</a></h3>
+      <h3>Customizing</h3>
+      <p>
+        To make changes to a default model set (such as <span>Animate</span>),
+        first make a copy. The default model sets included in the Modeller
+        installation are located here:<br />
+        <code
+          >C:\Program Files[ (x86)]\FaceGen\Modeller [Core|Pro]
+          3\data\csam\</code
+        >
+        <br />
+      </p>
+
+      <p>
+        Make a copy of the subdirectory with the name of the model set you want
+        to edit, then paste that into your:<br />
+        <code>Documents\FaceGen\Model Sets\</code> (<span>My Documents</span> on
+        Windows 7).
+      </p>
+
+      <p>
+        Change the directory name to something different and modify the contents
+        of the <span>_description.txt</span> file within it to distinguish your
+        custom model set from the original.
+      </p>
+
+      <p>
+        Restart Modeller and from the <span>Models &rarr; Model Sets</span> tab,
+        select your new set.
+      </p>
+      <p>
+        Within each model set, parts are grouped into sub-directories. Within
+        each sub-directory, parts are identified by a .TXT file containing the
+        name of the part. A corresponding .BMP file represents skin color, if
+        applicable. Coresponding files with the name FILE_COLOR represent the
+        various color texture options, which appear as selections labelled
+        'COLOR' in Modeller. You can add to, remove from, or edit these files.
+        Be aware that Modeller makes use of the alpha channel in these images
+        for transparency.
+      </p>
+      <h3>Migrating Model Sets from v3.5 and earlier</h3>
+
+      <ul style="text-align: left; color: #f57a29">
+        <li>
+          <span style="color: #000000"
+            >Add a <span>sam.txt</span> file for each SAM (ie.
+            <span>sam.tri</span>, <span>sam.egm</span>, etc.), containing the
+            name of the part.</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            >Put the files two directory levels deep (eg.
+            <span>Model Sets/Custom/Parts/...</span>)</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            >Add the file <span>_inclusive.flag</span> if you want the user to
+            be able to select multiple parts in that sub-dir.</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            >If you use <span>_inclusive.flag</span>, specify the SAMs that you
+            want to appear by default by adding a file named
+            <span>sam.default</span> for each.</span
+          >
+        </li>
+      </ul>
+      <h2>Expression Tab</h2>
+      <p>
+        Expressions are mesh-specific, so you will see a different selection
+        available depending on the parts you have selected in the
+        <span>Models</span> &rarr; <span>Model Parts</span> sub-tabs.
+      </p>
+
+      <h2>File Tab</h2>
+      <h3>File &rarr; Export</h3>
+      <h4>Blender</h4>
+      <ol>
+        <li>
+          Export to DAE with the
+          <span>Neutral expression and all animation targets</span> option, then
+          in Blender:
+        </li>
+        <li>
+          <span>File</span> &rarr; <span>Import</span> &rarr;
+          <span>Collada</span> and select your DAE file
+        </li>
+        <li>
+          Select a mesh containing morphs in the
+          <span>Scene Collection</span> then in the properties window select the
+          green mesh icon and look for the <span>Shape Keys</span> drop-down.
+        </li>
+      </ol>
+      <h4>Unity</h4>
+      <ol>
+        <li>
+          Export to FBX with the
+          <span>Neutral expression and all animation targets</span> option, then
+          in Unity:
+        </li>
+        <li>
+          Right-click on your <span>Assets</span> folder, select
+          <span>Import New Asset</span>, and select the FBX file
+        </li>
+        <li>
+          Ensure you have a <span>Textures</span> folder within your
+          <span>Assets</span> folder
+        </li>
+        <li>
+          Copy the exported color maps (image files starting with same name as
+          FBX file) into your <span>Textures</span> folder
+        </li>
+        <li>
+          Drag the new item from your <span>Asset</span> folder into the
+          <span>Scene view</span>
+        </li>
+        <li>
+          In the <span>Hierarchy</span>, select a mesh containing morphs and
+          <span>BlendShapes</span> will appear in the
+          <span>Inspector</span> under <span>Skinned Mesh Renderer</span>
+        </li>
+      </ol>
+      <h2><a href="modeller_legal.htm">License & Legal</a></h2>
+      <h2>Troubleshooting</h2>
+      <h3>There is no face in the viewport</h3>
+      <p><span>Help</span> &rarr; <span>Reset all settings to default</span></p>
+      <h3>Program will not start</h3>
+      <ul style="text-align: left; color: #f57a29">
+        <li>
+          <span style="color: #000000"
+            >Delete: <code>C:\Users\USERNAME\AppData\Local\FaceGen\</code></span
+          >
+        </li>
+        <li><span style="color: #000000">Restart</span></li>
+      </ul>
+      <h3>
+        Program icon appears in the taskbar but is not visible on the screen
+      </h3>
+      <p>
+        First, click on the program in the taskbar to ensure the program is not
+        just minimized.
+      </p>
+      <p>
+        If you have changed your monitor(s) or GPU drivers recently, the program
+        may be outside the screen area:
+      </p>
+      <ul style="text-align: left; color: #f57a29">
+        <li>
+          <span style="color: #000000"
+            >Right-click on the program in the task bar and select
+            <span>Close window</span></span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            >Delete: <code>C:\Users\USERNAME\AppData\Local\FaceGen\</code></span
+          >
+        </li>
+        <li><span style="color: #000000">Restart</span></li>
+      </ul>
+      <h3>Program closes</h3>
+      <p>
+        If you see the message
+        <span>FaceGen ... has stopped working ... will close</span>
+        <a href="man_trouble_stopped.htm">click here</a> for more details.
+      </p>
+      <h3>WHEA_UNCORRECTABLE_ERROR bluescreen</h3>
+      <p>
+        This is a hardware error in your computer which may be caused by a
+        faulty power supply. It can occur during
+        <span>Create from photo(s)</span> because this calculation requires
+        maximum use of your CPU.
+      </p>
+
+      <h2>Recent Version History</h2>
+      <h3>3.29</h3>
+      <ul style="text-align: left; color: #f57a29">
+        <li>
+          <span style="color: #000000"
+            >(Pro only) <span>Modify</span> &rarr; <span>Demographics</span> add
+            separate shape and color controls</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            >(Pro only) <span>File</span> &rarr; <span>Daz</span> add Genesis
+            8.1</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            ><span>Create</span> &rarr; <span>New</span> &rarr;
+            <span>Generate</span> fixed for <span>Any</span> gender</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000">Minor fixes and improvements</span>
+        </li>
+      </ul>
+      <h3>3.27</h3>
+      <ul style="text-align: left; color: #f57a29">
+        <li>
+          <span style="color: #000000"
+            ><span>Create</span> &rarr; <span>Scan</span> creates face shape
+            from 3D scan mesh (or other mesh)</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000">Minor fixes and improvements</span>
+        </li>
+      </ul>
+      <h3>3.26</h3>
+      <ul style="text-align: left; color: #f57a29">
+        <li>
+          <span style="color: #000000"
+            >Fix OBJ/WRL/STL/3DS export to save neutral shape and color maps
+            with <span>all expressions</span> option</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            >(Pro only) Daz export group and name text entry shared above
+            Genesis tabs</span
+          >
+        </li>
+      </ul>
+      <h3>3.25</h3>
+      <ul style="text-align: left; color: #f57a29">
+        <li>
+          <span style="color: #000000"
+            ><span>File</span> &rarr; <span>Export</span> now supperts Collada
+            DAE</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            ><span>File</span> &rarr; <span>Image</span> now has
+            <span>Transparent Background</span> option</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000">Controls are faster and smoother</span>
+        </li>
+        <li>
+          <span style="color: #000000"
+            >Drag and drop .FG files onto the viewport</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            ><span>Help</span> &rarr; <span>Reset</span> button to reset all
+            defaults</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            ><span>Animate</span> model set expressions now divided into
+            <span>FACS</span> and <span>Composite</span> tabs</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            >Current model set name displays in title bar</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            >Add <span>Color by mesh</span> option to <span>View</span> &rarr;
+            <span>Render</span></span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            >Rename <span>Generate</span> tab to <span>New</span></span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            >Rename <span>About</span> tab to <span>Help</span></span
+          >
+        </li>
+        <li>
+          <span style="color: #000000">Minor fixes and improvements</span>
+        </li>
+      </ul>
+      <h3>3.22</h3>
+      <ul style="text-align: left; color: #f57a29">
+        <li><span style="color: #000000">Improve Animate teeth model</span></li>
+        <li>
+          <span style="color: #000000">Fix hair disappearing on some GPUs</span>
+        </li>
+        <li>
+          <span style="color: #000000">Fix DLL not found on some systems</span>
+        </li>
+      </ul>
+      <h3>3.21</h3>
+      <ul style="text-align: left; color: #f57a29">
+        <li><span style="color: #000000">Remember export selections</span></li>
+        <li><span style="color: #000000">Fix image save formats</span></li>
+        <li>
+          <span style="color: #000000">Fix occasional model load crash</span>
+        </li>
+      </ul>
+      <h3>3.20</h3>
+      <ul style="text-align: left; color: #f57a29">
+        <li><span style="color: #000000">Add specularity to eyes</span></li>
+        <li>
+          <span style="color: #000000">Improve transparent hair rendering</span>
+        </li>
+        <li><span style="color: #000000">Add genetic interface</span></li>
+        <li>
+          <span style="color: #000000"
+            >Add image thumbnails to skin texture selection</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            >Add variance sliders to random generate</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            >Model Set selection clearer with radio buttons</span
+          >
+        </li>
+        <li><span style="color: #000000">Add model statistics tab</span></li>
+        <li>
+          <span style="color: #000000"
+            >(Pro only) Add CSV face space coordinate import</span
+          >
+        </li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <div style="height: 1px"></div>
+      <p>&copy; Singular Inversions 2022</p>
+      <div style="height: 1px"></div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+body {
+  font-size: 150%;
+  text-size-adjust: none;
+  margin: 0px;
+}
+section {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+a {
+  text-decoration: none;
+}
+.td {
+  border: 1px solid #f57a29;
+  padding: 5px;
+  width: 50%;
+}
+.footer {
+  text-align: center;
+  background-color: #4471af;
+  color: #ffffff;
+  width: 100%;
+}

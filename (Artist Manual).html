@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="max-image-preview:large" />
+    <style>
+      body {
+        font-size: 150%;
+        text-size-adjust: none;
+        margin: 0px;
+      }
+      section {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      a {
+        text-decoration: none;
+      }
+      p {
+        margin-left: 80px;
+      }
+      ul {
+        margin-left: 60px;
+      }
+      h3 {
+        margin-left: 40px;
+      }
+      h4 {
+        margin-left: 80px;
+      }
+      code {
+        color: #f57a29;
+      }
+      span {
+        color: #f57a29;
+      }
+    </style>
+    <title>FaceGen Artist Manual</title>
+    <meta name="description" content="FaceGen Artist software user manual" />
+  </head>
+
+  <body>
+    <nav style="background-color: #4471af; font-size: 3vw; width: 100%">
+      <div style="height: 5px"></div>
+      <ul
+        style="
+          display: table;
+          width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+          color: #ffffff;
+        "
+      >
+        <li style="display: table-cell; width: 18%">
+          <a style="color: #ffffff" href="(Home).html">Home</a>
+        </li>
+        <li style="display: table-cell; width: 22%">
+          <a style="color: #ffffff" href="(Products).html">Products</a>
+        </li>
+        <li style="display: table-cell; width: 21%">
+          <a style="color: #ffffff" href="(Support).html">Support</a>
+        </li>
+        <li style="display: table-cell; width: 18%">
+          <a style="color: #ffffff" href="(About).html">About</a>
+        </li>
+        <li style="display: table-cell; width: 20%">
+          <a style="color: #ffffff" href="(Contact).html">Contact</a>
+        </li>
+      </ul>
+      <div style="height: 5px"></div>
+    </nav>
+
+    <section>
+      <h1 style="font-size: 60px">
+        <span style="color: #cccccc"
+          ><span style="color: #4471af">F</span>ace<span style="color: #4471af"
+            >G</span
+          >en</span
+        >
+        Artist Manual
+      </h1>
+      <h2><a href="man_viewport.htm">Viewport</a></h2>
+      <h2>Create Tab</h2>
+      <h3><a href="man_create_photo.htm">Create &rarr; Photo</a></h3>
+      <h2>File Tab</h2>
+      <h3 id="export">File &rarr; Export</h3>
+      <h4>Parameter Group</h4>
+      <p>
+        Your shape morph will be placed within the <span>Head</span> region of
+        the parameter tab and will default to the group path shown. You can
+        change this to anything you like as long as you remember that forward
+        slash '/' creates a sub-group and your group path should not end with a
+        slash.
+      </p>
+      <h4>Parameter Name</h4>
+      <p>Don't use any characters that aren't allowed in a filename.</p>
+      <h4>Daz Studio Content Library</h4>
+      <p>
+        Daz Studio can read your new morph from any of your content directories.
+      </p>
+      <p>
+        If for some reason you want to use a different directory, first add it
+        as a content directory in Daz Studio (<span>Edit</span> &rarr;
+        <span>Preferences</span> &rarr; <span>Content</span> &rarr;
+        <span>Content Directory Manager</span> &rarr;
+        <span>Daz Studio Formats</span> &rarr; <span>Add</span>), then re-start
+        FaceGen Artist and it will appear on the list.
+      </p>
+      <h2><a href="artist_legal.htm">License & Legal</a></h2>
+      <h2>Troubleshooting</h2>
+      <h3>I purchased from Daz and can't find my serial number</h3>
+      <p>
+        Log into your
+        <a href="https://www.daz3d.com/customer/account/">
+          Daz customer account
+        </a>
+        and at the top, click on the lock icon 'Serial Numbers'. Look for
+        something like '37429_fgArtist110Pro'.
+      </p>
+      <h3>I purchased from Daz and can't find the install file</h3>
+      <p>
+        Log into your
+        <a href="https://www.daz3d.com/customer/account/">
+          Daz customer account
+        </a>
+        and at the top, click on the cloud icon 'Product Library'. Click on
+        'Facegen Artist Pro' on the left. Prefer the second (64-bit) download.
+      </p>
+      <h3>There is no face in the viewport</h3>
+      <p><span>Help</span> &rarr; <span>Reset all settings to default</span></p>
+      <h3>Program will not start</h3>
+      <ul style="text-align: left; color: #f57a29">
+        <li>
+          <span style="color: #000000"
+            >Delete: <code>C:\Users\USERNAME\AppData\Local\FaceGen\</code></span
+          >
+        </li>
+        <li><span style="color: #000000">Restart</span></li>
+      </ul>
+      <h3>
+        Program icon appears in the taskbar but is not visible on the screen
+      </h3>
+      <p>
+        First, click on the program in the taskbar to ensure the program is not
+        just minimized.
+      </p>
+      <p>
+        If you have changed your monitor(s) or GPU drivers recently, the program
+        may be outside the screen area:
+      </p>
+      <ul style="text-align: left; color: #f57a29">
+        <li>
+          <span style="color: #000000"
+            >Right-click on the program in the task bar and select
+            <span>Close window</span></span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            >Delete: <code>C:\Users\USERNAME\AppData\Local\FaceGen\</code></span
+          >
+        </li>
+        <li><span style="color: #000000">Restart</span></li>
+      </ul>
+      <h3>Program closes</h3>
+      <p>
+        If you see the message
+        <span>FaceGen ... has stopped working ... will close</span>
+        <a href="man_trouble_stopped.htm">click here</a> for more details.
+      </p>
+      <h3>WHEA_UNCORRECTABLE_ERROR bluescreen</h3>
+      <p>
+        This is a hardware error in your computer which may be caused by a
+        faulty power supply. It can occur during
+        <span>Create from photo(s)</span> because this calculation requires
+        maximum use of your CPU.
+      </p>
+
+      <h2>Recent Version History</h2>
+      <h3>3.10</h3>
+      <ul style="text-align: left; color: #f57a29">
+        <li>
+          <span style="color: #000000"
+            >User can opt-in to diagnostics reporting for program
+            improvement</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            >Fix issue with placing landmarks very close together on a
+            photo</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            >Detect and warn when antivirus programs prevent writing of JPG
+            files</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000">Minor fixes and improvements</span>
+        </li>
+      </ul>
+      <h3>3.8</h3>
+      <ul style="text-align: left; color: #f57a29">
+        <li><span style="color: #000000">Genesis 8.1 support</span></li>
+        <li>
+          <span style="color: #000000"
+            >Fix <span>Create</span> &rarr; <span>New</span> &rarr;
+            <span>Generate</span> with <span>Any</span> gender</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000">Minor fixes and improvements</span>
+        </li>
+      </ul>
+      <h3>3.7</h3>
+      <ul style="text-align: left; color: #f57a29">
+        <li>
+          <span style="color: #000000"
+            ><span>Create</span> &rarr; <span>Scan</span> creates face shape
+            from 3D scan mesh (or other mesh)</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000">Minor fixes and improvements</span>
+        </li>
+      </ul>
+      <h3>3.6</h3>
+      <ul style="text-align: left; color: #f57a29">
+        <li>
+          <span style="color: #000000">.FG file drag and drop support</span>
+        </li>
+        <li><span style="color: #000000">Faster slider updates</span></li>
+        <li>
+          <span style="color: #000000"
+            >Export group and name text entry boxes shared above
+            <span>Genesis</span> tabs</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            >Add field of view control to <span>View</span> &rarr;
+            <span>Camera</span></span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            >Rename <span>About</span> tab to <span>Help</span> and add
+            <span>Reset all</span> button</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            >Rename <span>Generate</span> tab to <span>New</span></span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            >Various small improvements and bug fixes</span
+          >
+        </li>
+      </ul>
+      <h3>3.5</h3>
+      <ul style="text-align: left; color: #f57a29">
+        <li>
+          <span style="color: #000000"
+            >Fix issue with DLL not found on some older systems</span
+          >
+        </li>
+      </ul>
+      <h3>3.4</h3>
+      <ul style="text-align: left; color: #f57a29">
+        <li>
+          <span style="color: #000000"
+            >Ensure head color map always exports at full resolution</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            >Faster updates for large detail textures (from large input photos)
+          </span>
+        </li>
+      </ul>
+      <h3>3.3</h3>
+      <ul style="text-align: left; color: #f57a29">
+        <li><span style="color: #000000">Fix rendering on Windows 7</span></li>
+        <li>
+          <span style="color: #000000"
+            >Ignore invalid text in numerical edit boxes</span
+          >
+        </li>
+      </ul>
+      <h3>3.2</h3>
+      <ul style="text-align: left; color: #f57a29">
+        <li>
+          <span style="color: #000000"
+            >Fix rendering on systems without Direct3D 11.1 support</span
+          >
+        </li>
+      </ul>
+      <h3>3.1</h3>
+      <ul style="text-align: left; color: #f57a29">
+        <li>
+          <span style="color: #000000">Fix crash for photos over 2K</span>
+        </li>
+      </ul>
+      <h3>3.0</h3>
+      <ul style="text-align: left; color: #f57a29">
+        <li>
+          <span style="color: #000000"
+            >Add option to keep eyeballs spherical</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000">Fix head-body color mismatch</span>
+        </li>
+        <li>
+          <span style="color: #000000"
+            >Add <span>Modify</span> &rarr; <span>Genetic</span> interface</span
+          >
+        </li>
+        <li>
+          <span style="color: #000000"
+            >Add variance sliders to <span>Create</span> &rarr;
+            <span>Random</span></span
+          >
+        </li>
+      </ul>
+    </section>
+
+    <footer
+      style="
+        text-align: center;
+        background-color: #4471af;
+        color: #ffffff;
+        width: 100%;
+      "
+    >
+      <div style="height: 1px"></div>
+      <p>&copy; Singular Inversions 2022</p>
+      <div style="height: 1px"></div>
+    </footer>
+  </body>
+</html>

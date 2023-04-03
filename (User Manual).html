@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="max-image-preview:large" />
+<title>FaceGen Customizer User Manual</title>
+<meta
+name="description"
+content="Manuals, tutorials, videos, groups and contact info"
+/>
+</head>
+
+<body bgcolor="#FFFFFF" text="#252525" link="#6A6650" alink="#A76E00" vlink="#6A6650" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<center>
+    <nav style="background-color: #4471af; font-size: 3vw; width: 100%">
+        <div style="height: 5px"></div>
+        <ul class="ul">
+          <li style="display: table-cell; width: 18%">
+            <a style="color: #ffffff" href="(Home).html">Home</a>
+          </li>
+          <li style="display: table-cell; width: 22%">
+            <a style="color: #ffffff" href="(Products).html">Products</a>
+          </li>
+          <li style="display: table-cell; width: 21%">
+            <a style="color: #ffffff" href="(Support).html">Support</a>
+          </li>
+          <li style="display: table-cell; width: 18%">
+            <a style="color: #ffffff" href="(About).html">About</a>
+          </li>
+          <li style="display: table-cell; width: 20%">
+            <a style="color: #ffffff" href="(Contact).html">Contact</a>
+          </li>
+        </ul>
+        <div style="height: 5px"></div>
+      </nav>
+<font size="-1">
+  <table width="670" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="250"><img src="" width="250" height="60"></td>
+      <td width="420"><img src="" width="389" height="60"></td>
+    </tr>
+  </table>
+  <table width="670" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td colspan="2"><img src="" width="670" height="7"></td>
+    </tr>
+  </table>
+  <table cellpadding=0 cellspacing=0 border=0 width=670>
+    <center>
+      <tr valign="top">
+        <td width=670><img src="" width="58" height="20"><br>
+          <table cellpadding=0 cellspacing=0 border=0 width=100%>
+            <tr>
+              <td><img src="" width="58" height="8000"><br>
+              </td>
+              <td valign=top>
+                <p><font face="Arial, Helvetica, sans-serif"><img src="" width="332" height="35"><br>
+                  </font></p>
+                <p><font face="Arial, Helvetica, sans-serif">
+                  <h1>User Manual</h3>
+                  </font></p>
+                <p><font face="Arial, Helvetica, sans-serif"><br>
+                  <a href="#requirements">
+                    Requirements</a><br>
+                  <a href="#overview">
+                    Overview</a><br>
+                  <a href="#mesh">
+                    Mesh Creation Guidelines</a><br>
+                  <a href="#create">
+                    Seleting a Project</a><br>
+                  <a href="#head">
+                    Head Model Preparation</a><br>
+                  <a href="#setup">
+                    Integration Setup</a><br>
+                  <a href="#model">
+                    Model Integration</a><br>
+                  <a href="#tips">
+                    Tips & Tricks</a><br>
+                  <a href="#technical">
+                    Technical Details</a><br>
+                <p>Also see the <a href="faq.htm">FaceGen FAQ</a>.
+
+                <p><a name="requirements"></a><h2>1. Requirements</h2>
+                    <ul>
+                      <li>P4 or equivalent running Windows XP/Vista/7.
+                      <li>1GB or higher RAM.
+                      <li>10GB of hard drive space per project.
+                    </ul>
+                  <p>Setting up a project requires an overnight run on your PC.
+
+                <p><a name="overview"></a><h2>2. Overview</h2>
+                  <p>All operations in Customizer take place in a <b>project</b>. A project
+                     creates a <b>model set</b>; a group of face-related models that fit
+                     together as seen in FaceGen Modeller:
+                  <p><table cellpadding=0 cellspacing=0 border=0 width=100%>
+                    <tr>
+                      <td><img src="" width="100" height="132">
+                      <td><img src="" width="100" height="132">
+                      <td><img src="" width="100" height="132">
+                      <td><img src="" width="110" height="132">
+                      <td><img src="" width="110" height="132">
+                    </tr>
+                  </table>
+                  <p>Every project has a <b>mean face</b> (created by Customizer), which other
+                     components should
+                     conform to as closely as possible (of course you may also want to ensure that
+                     some components fit with each other):
+                  <p align=center><img src="" width="100" height="132">
+                  <p> You can integrate any number of meshes (heads, faces, eyes, teeth, hair, etc.)
+                      into the same project as long as:
+                    <ol>
+                      <li> They all fit to the same mean face.
+                      <li> The neck seams to be held fixed are in the roughly the same place.
+                    </ol>
+                  <p> If your meshes fit together seamlessly when you create them, they will fit
+                      seamlessly for any face you create in FaceGen.
+                  <p> You work with a project in 3 <b>stages</b>. The 'Head Model Preparation'
+                      and 'Integration Setup' stages set up the project, and the 'Model Integration'
+                      stage is where you actually integrate your meshes into FaceGen.
+                  <p>Unless otherwise noted, you can exit Customizer at any time and continue your
+                     work later.
+
+                <p><a name="mesh"></a><h2>3. Mesh Creation Guidelines</h2>
+
+                    <p> In the steps outlined later in this document, you should create your meshes
+                        according to the following guidelines:
+                    <p> <h3>All Meshes:</h3>
+                    <ul>
+                      <li> Polygonal models (meshes) only.
+                      <li> Objects using multiple texture maps will be separated
+                           into separate objects - one per texture map.
+                    </ul>
+                    <p> <h3>Meshes With Morph Targets / Blendshapes / Endomorphs</h3>
+                    <ul>
+                      <li> To have your morph targets appear in FaceGen, create them along with your
+                           base model - you can use ours as a guide. FaceGen morph targets are
+                           mesh-specific and are not copied over automatically.
+                      <li> There is no need to include UVs on the morph target models - UVs are taken
+                           from the base model only.
+                    </ul>
+                    <p><h3>Head Meshes</h3>
+                        Almost any mesh and UV layout for head models is
+                        acceptable, with the following restrictions:
+                    <ul>
+                      <li> The mouth must be closed. You can add open-mouth animation morphs
+                           later, but the basic face shape statistics are defined with a
+                           closed mouth.
+                      <li> The UV layout must be non-overlapping in the face area. In other words,
+                           a pixel in the face area of the UV map should not map to more than one
+                           point on the model. No mirrored face textures !
+                      <li> You will have multiple models representing the face if:
+                          <ul>
+                          <li> You have several level-of-detail (LOD) models of a head.
+                          <li> You have several versions of a head model with different hairstyles
+                                 or facial hair.
+                          </ul>
+                      <li> For best results, your neck seam should not be close to the head
+                           (leave room below the chin for a double chin).
+                      <li> The nostrils should not be indented for texture map creation. If
+                           you want indented nostrils, you'll have to integrate two versions
+                           and combine (see details in Integration below).
+                      <li> SDK Use: To maximize speed and minimize RAM usage of the color texture
+                           statistics, you need to minimize the size of the texture statistics.
+                           This should be done by having the head in its own texture image, not
+                           shared with the body, and using the full extent of that texture image
+                           to maximize the size of the face area.
+                    </ul>
+
+                <p><a name="create"></a><h2>4. Creating a Project</h2>
+
+                  <ul>
+                      <li> Select a directory with at least 10GB of free disk space. A new directory
+                           for your project will be created there. Do NOT use the default selected
+                           directory in 'program files' as this can cause issues with Windows Vista and 7.
+                      <li> For simplicity, use a single unique name for the new project and it's model
+                           set name.
+                      <li> If you've already created a project, you should be able to load it by navigating
+                           to the directory in which you created it.
+                      <li> To modify the FaceGen Default model set, create a new project and watch for
+                           specific instructions below.
+                    </ul>
+
+
+                <p><a name="head"></a><h2>5. Head Model Preparation</h2>
+
+                  <p><b>WARNING:</b> If you have previously completed the Head Model Preparation stage
+                      and wish to make changes, create a NEW project, do not use the 'back' buttons
+                      to redo this stage, as Customizer may produce incorrect results.
+
+                  <p><h3>Manual registration</h2>
+                    <p> Customizer indicates the filename of the FaceGen internal mean face in both
+                        Wavefront OBJ and Maya ASCII (ma) formats.
+                    <p> Import the internal mean face into your preferred 3D modelling application:
+                    <ul>
+                      <li>Maya: do NOT use the OBJ file, use the MA file (or Maya will
+                          scramble the vertex ordering).
+                    </ul>
+                    <p> Feel free to rotate, move or scale the internal mean face to your preferred
+                        coordinate system, but do NOT alter its
+                        shape or mesh structure (eg. vertex ordering) in any way.
+                    <p> Now you can build or modify your meshes to conform to the internal mean face
+                        as closely
+                        as possible. In other words, any head meshes must be modified to have
+                        the same shape as the internal mean face (in your chosen size, orientation and position)
+                        over its entire surface.
+                        When Customizer creates the shape and colour statistics
+                        for your meshes it will do so based on their positioning relative to the
+                        mean face.
+                    <p> Your first step will be to build your highest resolution head mesh
+                        according to the 'Mesh Creation Guidelines' above.
+                        This will be used in the next stage to define the neck seam.
+                    <p> If you only want to modify the existing FaceGen Default Model set,
+                        the rotated/scaled internal mean face for that has been placed in the
+                        subdirectory 'DefaultModelSetInternalMean' in your Customizer 1.3
+                        directory. Use this without modifying it in any way. To get the hires
+                        base mesh, export the hires skin mesh from the default model set
+                        using FaceGen Modeller, but be sure to hit the 'set all to zero'
+                        button in both the symmetric and asymmetric shape tabs first !
+                        Use this for your highest resolution head mesh below.
+
+
+                  <p><h3>Check registered models</h2>
+                    <p> Export your transformed mean face and
+                        highest resolution head mesh.
+                        Your mesh(es) must be exported into the OBJ format:
+                    <ul>
+                      <li>Maya: The OBJ export plugin can be loaded by selecting:<br>
+                          Window -> Settings/Preferences -> Plug-in Manager.<br>
+                          Be sure to freeze any transforms into the vertex coordinates before exporting.
+                    </ul>
+                    <p> This step lets you double-check that you haven't accidentally
+                        further transformed one of your meshes during import or export.
+                    <p> In the first dialog box, select the OBJ of your transformed internal mean face.
+                        In the second dialog box, add the one or more models corresponding to
+                        your high-resolution head mesh.
+                    <p> Your head mesh,
+                        shown in transparent green,
+                        should conform closely with the internal mean face, shown in opaque white.
+                    <p> If you can't see any green at all, your mesh is probably in the
+                        wrong location, or shrunk to an imperceptible size. You will have
+                        to correct this problem before integration will work.
+
+                <p><a name="setup"></a><h2>6. Integration Setup</h2>
+                  <p><h3>Obtain neck seam vertices</h3>
+                    <p> Here you tell Customizer where the neck seam of your model is.
+                    <p> The neck seam is important since customizer must keep
+                        this region fixed for any shape of face created in FaceGen when
+                        it creates the shape statistics.
+                    <p> You can define the neck seam automatically in some cases by toggling
+                        through seams in the geometry, or you can define it manually, by selecting
+                        each vertex of the seam. You do not need to worry about duplicate
+                        vertices in the neck seam at this stage.
+                    <p> You do not have to define a neck seam, but if you don't then the neck
+                        seam will change shape along with the head when you apply different
+                        faces to it with FaceGen.
+                    <p> Don't worry if the head appears facing the wrong direction in this step;
+                        as long as this mesh overlapped closely in the 'Check registered models'
+                        step, your coordinate system has been properly registered.
+                  <p><h3>Create cache files</h3>
+                    <p> Be sure you have 10GB of free disk space, and you don't need your
+                        computer's full power for the next 10-20 hours, then hit 'Start Setup'.
+                    <p> Once it's finished, your project is set up and ready to integrate
+                        as many meshes as you need by repeating the Model Integration steps
+                        below.
+                    <p> You should NEVER repeat this step unless you change the
+                        co-ordinate system of your meshes or the general location neck seam,
+                        in which case you will need to create a new project.
+                    <p> Do not delete the 10GB of cache files if you think you may have to
+                        integrate more models in the future - or you will have to re-create
+                        them.
+
+                <p><a name="model"></a><h2>7. Model Integration</h2>
+                  <p> The setup stages are only done once per project, but the model integration
+                      stage can be repeated as many times as you like as you add models to a
+                      model set.
+                  <p> You do NOT need to repeat the setup stages if you modify your
+                      head meshes - only if your coordinate system changes or your neck seam
+                      changes significantly.
+                  <p> All models to be part of the model set must go through the geometry integration
+                      step, even if you'll only be using the color texture stats.
+                  <p> If your model has a UV map
+                      which includes some of the face or skin area, then it will need to be
+                      put through the texture integration step as well. Even if it doesn't,
+                      you may wish to perform this step to integrate your own texture image so
+                      it can be seen in FaceGen Modeller.
+                  <p> Once you have integrated the models you want, they're ready to use in
+                      the directory 'XXX\csamYYY', where XXX is the data directory you selected
+                      for this project, and YYY is the project name you chose.
+                  <p> To make this project appear as a model set in FaceGen Modeller:, just copy
+                      the 'csamYYY' directory (including its contents) into your FaceGen
+                      Modeller Model Set directory:
+                  <ul>
+                    <li> Modeller 3.6 and later:
+                      <ul>
+                        <li>Create a subdirectory 'MyName' in your model set directory:
+                          <code>Documents/FaceGen/Model Sets/</code>.
+                        <li>Create a subdirectory within that 'MyName' giving:
+                          <code>Documents/FaceGen/Model Setes/MyName/MyName/</code>
+                        <li>Copy the 'csamYYY' contents into this directory
+                        <li>For each '.fr3d' file, create a similarly named '.txt' file containg
+                            the name of the part as you want it to appear in Modeller.
+                      </ul>
+                    <li> Modeller 3.5:
+                      <ul>
+                        <li> Copy the 'csamYYY' directory (including contents) into your
+                         FaceGen Model Set directory:
+                        <li>XP: <code>C:\Documents and Settings\USERNAME\Application Data\FaceGen\Modeller3\ModelSets\</code>
+                        <li>Vista,7: <code>C:\Users\USERNAME\appData\Roaming\FaceGen\Modeller3\ModelSets\</code>
+                      </ul>
+                  </ul>
+                  <p> Restart FaceGen Modeller</p>
+                  <p><h3>Geometry integration</h3>
+                    <p>You can integrate multiple models at the same time. They must be in the OBJ
+                       format. They must conform to the mean face (or to your head models that
+                       conform to the mean face). Geometry integration will ensure they conform
+                       to any face you create in FaceGen.
+                    <p>If you are just adding morph targets to an already integrated mesh, then you
+                       can select the TRI file for that model part instead of an OBJ file
+                       (using the file type drop-down selection in the file load dialog box)
+                       , and the morph
+                       targets will be automatically set up.
+                    <p>If you are modifying the FaceGen Default model set, just use the TRI files
+                       from the csamDefault directory and your meshes will appear with all morphs
+                       already defined.
+                    <p>You can select which models will be integrated by clicking directly
+                       in the 'Skip' column beside each model.
+                       After preparing all your models for integration, click 'Start Integration'.
+                       Once the integration is finished, click 'Done'.
+                    <p>Examples of things you can integrate:
+                    <ul>
+                      <li>Different level-of-detail head meshes.
+                      <li>Torso or body meshes (just for the color stats).
+                      <li>Teeth, tongue and sock models (just for the shape stats).
+                      <li>Eye models.
+                      <li>Hairstyles, hats and helmet models.
+                      <li>Glasses and jewellery models.
+                      <li>Skeletal, muscle and tissue models.
+                    </ul>
+                    <p>'Add' / 'Change' model options:
+                    <ul>
+                      <li>Assign Neck Seam Vertices.
+                        <ul><li>For head models containing a neck seam,
+                            you must specify the neck seam vertices again. This allows Customizer
+                            to hold those vertices precisely unchanged in the resulting shape
+                            statistics. If you skip this the vertices may move by a very small amount
+                            creating small gaps in neck seam to the body.
+                            <li> When selecting individual vertices you must click on a facet (triangle or quad)
+                                 of which that vertex is a part, close to the vertex. This approach makes it
+                                 easy to select duplicate vertices by clicking on the facet associated with
+                                 each such vertex.
+                        </ul>
+                      <li>Animation Morphs: Animation morphs are not created automatically
+                          by Customizer, you must add them yourself. There are two kinds of
+                          animation morphs in FaceGen:
+                        <ul>
+                          <li>Diff Morphs: Are constant vertex displacements which are applied
+                              identically to any face. They work well for mouth and eyebrow
+                              movements. They do not have to be integrated into FaceGen as
+                              they can also be added after exporting.
+                          <li>Stat Morphs: Some animations such as blinks, eye movements and
+                              the 'th' phoneme require a specific
+                              target position. FaceGen applies shape statistics to this target
+                              position to ensure it is adjusted correctly. These morphs must
+                              be integrated into FaceGen to work properly with all faces.
+                        </ul>
+                      <li>Animation morphs must be defined on meshes with an identical topology
+                          to the base shape.
+                      <li>Default Load: Does this model load by default when you select this
+                          model set in FaceGen Modeller ?
+                      <li>Skip This Model: This model has already been integrated - don't do it
+                          again.
+                      <li>Surface Properties: Sets the specular and shininess values for viewing
+                          within FaceGen Modeller.
+                    </ul>
+                    <p> After geometry integation, your models will be set up to automatically
+                        morph to fit the shape of whatever face you create. If you do NOT want
+                        this functionality - if you want your model to remain a fixed shape
+                        and position - then you can delete the '.EGM' file associated with
+                        that particular model in the directory for this project. This is
+                        useful for torso/body models, which are stitched to a fixed neck seam
+                        and do not need to be morphed for different face shapes.
+                    <p> Once this step is complete, if for some reason you need the vertex
+                        indices of the seam
+                        they are listed in the file 'XXX.fgprj' in the directory 'projXXX',
+                        where 'XXX' is your project name. This directory will be in your
+                        FaceGen Customizer directory unless you specified it be created elsewhere.
+                        The vertex indices are listed after the tag 'ModelYYSeamIdx', where
+                        'YY' is a number corresponding to the model part.
+                  <p><h3>Texture integration</h3>
+                    <p> <b>Warning.</b> The Texture Integration stage begins with the output from the Geometry
+                        integration stage. If you change the UVs of your mesh, you will have to
+                        re-run the geometry integration for that model in order for the UV change
+                        to be propogated to this stage.
+                    <p> Hit the 'Back' button at any time to return to the Model Integration menu.
+                    <p> Customizer can create <b>skin texture</b> statistics for each model. The skin
+                        texture is a human face texture (including the eyes) over the face region,
+                        and the appropriate skin colour everywhere else. Some examples:
+                    <p>
+                    <table width=90% border=0 align=center>
+                      <tr>
+                        <td><img src="" width=128 height=128 border=3></td>
+                        <td><img src="" width=64 height=64 border=3>
+                            <img src="" width=64 height=64 border=3></td>
+                        <td><img src="" width=128 height=128 border=3></td>
+                      </tr><tr>
+                        <td><i>Default model mean skin</i></td>
+                        <td><i>Default model mean eyes</i></td>
+                        <td><i>Custom model mean skin</i></td>
+                      </tr>
+                    </table>
+                    <p> You can composite fixed textures over skin textures; for example if you
+                        have a head mesh that includes a raised area for hair. In this case,
+                        create the hair texture along with an alpha map for compositing it
+                        over the skin texture:
+                    <p>
+                    <table width=90% border=0 align=center>
+                      <tr>
+                        <td><img src="" width=128 height=128 border=3></td>
+                        <td><img src="" width=128 height=128 border=3></td>
+                      </tr><tr>
+                        <td><i>hair texture image</i></td>
+                        <td><i>composite alpha image</i></td>
+                      </tr>
+                    </table>
+                    <p> Note that the composite alpha image is a greyscale image where pixel values of
+                        zero show only FaceGen skin texture and pixel values of 255 show only your
+                        hair texture.
+                    <p> Here are some examples of the end result textures with this hair composite:
+                    <p>
+                    <table width=90% border=0 align=center>
+                      <tr>
+                        <td><img src="" width=128 height=128 border=3></td>
+                        <td><img src="" width=128 height=128 border=3></td>
+                        <td><img src="" width=128 height=128 border=3></td>
+                      </tr>
+                    </table>
+                    <p> We do not recommend using the composite feature here, as FaceGen statistics are
+                        normally kept at lower resolution than your final composite image will be, and you
+                        may wish to switch between multiple composite images rather than pre-bake one in.
+                    <p>'Detail' model options:
+                    <ul>
+                      <li>Skip this texture: This model does not need a texture or the texture
+                          has already been created in a previous run.
+                      <li>Surface Properties: The specularity & shininess as viewed in Modeller.
+                      <li>Desired Image Dimension: Note:
+                        <ul>
+                          <li> When detail texture is added in Modeller, these image dimensions
+                               will be DOUBLED. In other words, 512x512 will result in a
+                               1024x1024 texture.
+                          <li> The largest (512x512) option runs slowly in Modeller.
+                          <li> SDK Customers: You should keep these dimensions as small as possible
+                               since the statistics files can be large.
+                        </ul>
+                      <li>This eye is occluded by: If you are using separate eye models,
+                          check this option to minimize the amount of skin colour on your
+                          eye texture maps.
+                      <li>Texture Overlay Image (not recommended): To overlay (composite) a texture over the skin
+                          texture (such as hair) load it here. You must have a separate alpha
+                          map for the composite.
+                      <li>Compositing Alpha Map. Load the corresponding compositing alpha map
+                      <li>Use alpha render. If the texure overlay image has an alpha
+                          transparency channel click here for Modeller to render it last.
+                      <li>Options for Fixed Texture: Use the specified fixed texture instead
+                          of FaceGen's skin texture. Note that Modeller will only display textures
+                          whose pixel size is a power of 2 in each dimension.
+                      <li>Use alpha render. If the texure overlay image has an alpha
+                          transparency channel click here for Modeller to render it last.
+                    </ul>
+                    <p> Select the models you want processed (or re-processed) by making sure their
+                        'skip' column is clear, and hit 'Start'.
+                    <p> Once finished, you will want to touch up the base texture image from the very
+                        smooth one created by FaceGen to add your own wrinkles, skin folds on the ear,
+                        etc. This can be done by modifying the base texture created above.
+                    <p> Locate the '.BMP' file (the base texture) corresponding to the model
+                        part that contains the desired area, and add highlights & shading to it:
+                    <p>
+                    <table width=90% border=0 align=center>
+                      <tr align=center>
+                        <td><img src="" width=128 height=128 border=3></td>
+                      </tr><tr align=center>
+                        <td><i>Default hires skin base texture with ear detail added</i></td>
+                      </tr>
+                    </table>
+                    <p> Be careful not to change the layout or overall color of the mean face.
+                        The resulting face textures will all have the same modification.
+                    <p> Alternatively, you can just replace the mean texture altogether with
+                        your own - it will still work with the texture statistics.
+                        If you do this, make sure you don't introduce any seams
+                        where your different textures meet on your models. As above, be
+                        sure not to change the UV layout (or you'll have to redo the texture
+                        integration).
+                    <p> In both cases, you have the option of increasing the pixel size of the image by one or
+                        more powers of 2, as long as you do not change the aspect ratio or use a factor other
+                        than a power of 2.
+
+                  <p><h3>New base (fantasy races)</h3>
+                    <p>Once you've integrated a mesh with our mean human shape, you can expand it to other
+                       stylistic base shapes and base textures - for instance for fantasy races.
+                    <p>If you are not using FaceGen stat morphs, you can do this entirely outside of
+                        FaceGen by simply replacing the base mesh with your own (see fileconvert utility
+                        below). However if you need to create FaceGen stat morphs, you must use this stage.
+                    <p>You should make a modified version of the mesh that you
+                        have conformed to the
+                       mean human into the desired new shape, without changing the vertex
+                       count or vertex ordering.
+                    <p>Although this new base mesh no longer needs to conform to FaceGen's
+                       mean human face, it must remain the same overall size and in the same
+                       orientation.
+                    <p>Morphs are easily copied over to your new fantasy faces. FaceGen uses
+                       two types of morphs; diff morphs and stat morphs. Diff morphs from the
+                       human mesh will be copied over automatically. Stat morphs require a bit
+                       more work. A stat morph is one where the morph must end in a very specific
+                       target position, such as a blink, an eye movement, or the 'th'
+                       phoneme. In the case of a stat morph, you must re-define it on the
+                       new fantasy base mesh (where applicable).
+                    <p>If a model part has no morphs, then an easier route is to avoid using
+                       this stage of the Customizer entirely and just swap in the modified base
+                       mesh and base texture. Of course they must still be in the same topology
+                       and UV layout. To convert your OBJ model directly to TRI use the
+                       <a href="download/FileConvert.zip">fileconvert</a> utility.
+                    <p>To get started, select 'New Base' to integrate models for a new fantasy
+                       race, or 'Modify' to continue work on an existing fantasy race.
+                       'Remove' will destroy all work on an existing fantasy race.
+                    <p>In the next dialog, you can add corresponding fantasy base meshes for
+                       each human base mesh in this project, using the 'Modify' button.
+                    <p>In the 'Modify' dialog box you have the following options:
+                    <ul>
+                      <li>'New Base Model File'. Select the fantasy race version of the
+                          corresponding human mesh. Remember the vertex count and ordering
+                          must be identical.
+                      <li>'Skip this model'. Indicates this one has already been processed.
+                      <li>'Modify' lets you to select the appropriate stat morph
+                          model corresponding to each of the listed human stat morphs.
+                          If there are no stat morphs listed, ignore this button.
+                    </ul>
+                    <p>Once you've entered your new base model information, you're ready to
+                        hit 'Start' to have your fantasy race models
+                        integrated into FaceGen.
+
+                <p><a name="tips"></a><h2>8. Tips & Tricks</h2>
+
+                <ul>
+                <li><b>Understanding the file types</b>
+                    <p>Each model part consists of one or more of the following file types,
+                       with the same root name:
+                    <ol>
+                      <li> TRI. This is the base mesh, which includes UVs and information about morph
+                           targets but not the FaceGen shape changes.
+                      <li> BMP. This is the base texture.
+                      <li> EGM. This is the statistical shape information, which is used to modify the
+                           base face shape. Without this file, the mesh will never change shape.
+                      <li> EGT. This is the statistical texture information, which is used to modify the
+                           base texture image. Without this file, the texture image is fixed.
+                      <li> FIM. This is the UV remapping transform, which is used to transform the detail
+                           texture in the FG file (taken from a photograph) into the UV layout of this mesh.
+                           Without this file, a mesh cannot have a detail texture applied.
+                    </ol></li><p>
+                <li><b>Sharing a texture between more than one mesh</b>
+                    <p> Let's say you've got separate meshes for the eyes and head, but
+                        they share a texture image. Do the following:
+                    <ol>
+                      <li> Integrate each model separately, giving 3 sets of statistics files;
+                           one for each eye and one for the head.
+                      <li> Create a composite mesh by merging the eyes and head meshes.
+                           Integrate this composite to get another set of files.
+                      <li> Copy just the texture statistics files of the composite
+                           (the BMP, EGT and FIM files) over those for each of the separately
+                           integrated objects.
+                      <li> If you're using the Modeller, when you export you'll still get
+                           3 texture maps but now they're all the same, and each one includes
+                           textures for the head and both eyes. Just use one of them.
+                      <li> If you're using the SDK, you can optimize your use of this
+                           model by having the 3 meshes share the same texture statistics
+                           in memory (highly recommended given the size of the texture stats).
+                    </ol>
+                    <p>
+                <li><b>Using more than one texture with a single mesh.</b>
+                    <p> Let's say you've got a head model which references separate texture
+                        images (materials) for the skin and eyes. Do the following:
+                    <ol>
+                      <li> Integrate the model and Customizer will offer to break it into
+                           separate meshes, one for each texture (or you can break it up
+                           yourself into parts that only use one texture).
+                      <li> Now take the original model and combine all the surfaces into a
+                           single material using a single texture map (it doesn't matter what
+                           the UVs are, they will be thrown away).
+                      <li> Integrate this 'fused' model with Customizer, but only integrate
+                           the geometry.
+                      <li> To use Modeller, view the model broken into separate meshes, then
+                           export that model to get the texture maps. Without changing the
+                           face, switch model parts to the 'fused' model and export it to
+                           get the geometry.
+                      <li> To use the SDK, just use the geometry statistics of the 'fused'
+                           model (the TRI and EGM files) and the texture statistics of the
+                           each of the broken up models for each texture (the BMP, EGT and FIM
+                           files).
+                    </ol>
+                    <p>
+                <li><b>Fixing the neck or head shape</b>
+                    <p> If you want to hold an area such as the back of the neck or back of
+                        the head fixed, then specify those vertices as 'seam' vertices during
+                        both the Integration Setup and Model Integration stages. FaceGen will
+                        then keep their shape unchanged for different face shapes. Note that
+                        you should not do this on the face area itself since this will result
+                        in sharp discontinuities between areas that deform and areas that don't.
+                    <p>
+                <li><b>Creating a mean texture larger than the texture stats</b>
+                    <p> Having a larger mean texture than the statistics is a good way to
+                        speed up FaceGen, especially for parts that don't contain the face
+                        and thus have very little detail in the texture stats. Doing this
+                        is very important when using the SDK. For models which don't include
+                        the face, just create both at the smaller size, then use a paint
+                        program to oversample the mean (BMP) texture. For models which include
+                        the face, you will need to create the stats at both sizes, then use
+                        the BMP and matching FIM from the large size, and the EGT from the
+                        smaller size.
+                     <p>
+                <li><b> Specifying two-sided rendering in Modeller</b>
+                    <p> You can inform modeller that a specific SAM should be rendered 2-sided by
+                        adding the following line to the end of the FR3D (text) file created by
+                        Customizer for that SAM:<br>RENDER2SIDED    1
+                    <p>
+                <li><b> Automating integration</b>
+                  <p> You can't automate the entire process, but you can automate the most annoying part;
+                      selecting and naming the various morph targets. In a batch file, for each mesh:
+                  <ol>
+                    <li> Use the <a href="download/FileConvert.zip">fileconvert utility</a> to convert
+                         the model and each of its morph targets to our TRI format:
+                      <p> > fileconvert obj-tri myMesh
+                    <li> Use the <a href="download/AddAnimateMorph.zip">addanimatemorph utility</a> to merge
+                         all the morphs into one TRI file:
+                      <p> > addanimatemorph diff myMesh.tri myMesh_morph1.tri "Name of morph 1"
+                      <p> > addanimatemorph diff myMesh.tri myMesh_morph2.tri "Name of morph 2"
+                      <p> > [...etc...]
+                    <li> Now when you load this TRI into Customizer during the Geometry Integration step,
+                         the morphs will all just appear.
+                    <li> If the morphs on different meshes have the same name, then Modeller will treat them
+                         as the same morph.
+                  </ol>
+                  <p>
+                </ul>
+
+                <p><a name="technical"></a><h2>9. Technical Details</h2>
+
+                <ul>
+                <li><b>Mesh Structure</b>
+                    <ul>
+                    <li> Customizer preserves tri and quad facets, n-gons will be broken down into tris.
+                    <li> Customizer preserves texture coordinates in either per-vertex or indexed
+                         per-facet structures.
+                    <li> Surfaces with different texture images must be separate objects.
+                    <li> Vertex normals are discarded since the shape can change dramatically.
+                         They are re-generated automatically for rendering.
+                    <li> Vertex ordering is not altered.
+                    <li> Facet ordering is not altered (except for n-gons).
+                    <li> Indexed texture coordinate ordering is not altered (except for n-gons).
+                    <li> Ultimately, the shape statistics are only moving vertices, so you can
+                         just copy the new vertex positions back into any proprietary structure
+                         you may have in your 3D modelling software (such as bone vertices).
+                    </ul>
+                <li><b>Texture Maps</b>
+                    <ul>
+                    <li> For any object which is part of the head, Customizer generates a 'skin'
+                         texture map (image).
+                    <li> Skin texture maps represent the coloring of a bald head with no facial
+                         hair, as seen in the FaceGen Modeller default models.
+                    <li> To add your own textures over the skin, such as hair textures, just
+                         composite them over the exported skin texture map,
+                         as demonstrated in the 'Texture Overlay' function in FaceGen Modeller.
+                    <li> Non-skin textures for accessory models are unaffected.
+                    </ul>
+                <li><b>Face Shape</b>
+                    <ul>
+                    <li> Although your mesh topology is not changed, the face shape is of course
+                         altered.
+                    <li> The deformations affect the medium and larger-scale shape of the face, but
+                         do not affect finer details, such as creases in the geometry.
+                    <li> The deformations do not affect the coordinate system of your model;
+                         it retains the same size, orientation and position in space.
+                    <li> The deformations necessarily have an effect on the accessory models.
+                    <li> The vertices in the neck seam remain fixed for any face shape.
+                    </ul>
+
+                <li><b>Hair, Ears, Wrinkles, Tattoos, Detail</b>
+                    <ul>
+                    <li> FaceGen skin textures are very smooth.
+                    <li> Wrinkles, ear folds and skin surface texture should be added to the base texture.
+                    <li> Anything that will change character-to-character, such as hair or tattoos,
+                         should be post-composited over the final texture created by FaceGen.
+                    <li> Pre-compositing can be used but will only have the resolution of the EGT.
+                    <li> FaceGen detail textures should only be used to transfer individual detail
+                         taken from photographs.
+                    </ul>
+                </ul>
+
+              </font></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </center>
+  </table>
+  <table width="670" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td colspan="2"><img src="" width="670" height="24"></td>
+    </tr>
+    <tr align="center">
+      <td colspan="2"><font face="Arial, Helvetica, sans-serif" color="#333333" size="-2"><br>
+        &copy; Singular Inversions Inc.</font></td>
+    </tr>
+  </table>
+  <br>
+</center>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="robots" content="max-image-preview:large">
+<link rel="stylesheet" href="/CSS/(3D Print Manual).css">
+<title>FaceGen FAQ</title>
+<meta name="description" content="Frequently asked questions about FaceGen">
+</head>
+
+<body>
+<nav style="background-color:#4471AF; font-size:3vw; width:100%">
+<div style="height:5px"></div>
+<ul style="display:table; width:90%; margin-left:auto; margin-right:auto; color:#FFFFFF">
+  <li style="display:table-cell; width:18%"><a style="color:#FFFFFF" href="(Home).html">Home</a></li>
+  <li style="display:table-cell; width:22%"><a style="color:#FFFFFF" href="(Products).html">Products</a></li>
+  <li style="display:table-cell; width:21%"><a style="color:#FFFFFF" href="(Support).html">Support</a></li>
+  <li style="display:table-cell; width:18%"><a style="color:#FFFFFF" href="(About).html">About</a></li>
+  <li style="display:table-cell; width:20%"><a style="color:#FFFFFF" href="(Contact).html">Contact</a></li>
+</ul>
+<div style="height:5px"></div>
+</nav>
+
+<section>
+<h1 style="font-size:50px"><span style="color:#CCCCCC"><span style="color:#4471AF">F</span>ace<span style="color:#4471AF">G</span>en</span> Frequently Asked Questions</h1>
+<h3>Is there a way to modify individual controls without affecting any of the others ?</h3>
+<p>No, the various controls are statistically correlated and cannot be perfectly isolated.</p>
+<h3>Can I adjust the number of polygons in the mesh ?</h3>
+<p>Yes. If you don't like any of the meshes included with Modeller, you can add your own with
+  <a href="customizer.htm">Customizer</a>.</p>
+<h3>Can I adjust the resolution of the exported texture maps ?</h3>
+<p>This is done automatically based on the amount of detail in the source photo, up to a max size of
+    <span>2048</span>x<span>2048</span> (32-bit)
+    or <span>4096</span>x<span>4096</span> (64-bit version).</p>
+<p><h3>Can I use the hairstyles from Modeller with 3D Print ?</h3></p>
+<p>No. Hairstyles for 3D printing must be specially designed for that purpose.</p>
+<h3>Are there plans for hair generation ?</h3>
+<p>We will be adding more hair models over time. You can also add your own using the <a href="rdl_manual.htm">
+  Integration Tools</a> or the older <a href="customizer.htm">Customizer</a>.</p>
+<h3>Are there plans for a 'BodyGen' ?</h3>
+<p>Not currently.</p>
+<h3>Are there plans for an MacOS or Linux version ?</h3>
+<p>Not currently. If your Mac uses an Intel processor, you can run Windows via
+  <a href="https://support.apple.com/boot-camp">Boot Camp</a>,
+  <a href="https://www.parallels.com">Parallels</a> or
+  <a href="https://www.vmware.com/products/fusion.html">VMWare Fusion</a>.
+  Some Linux customers have had success with WINE.</p>
+</p>
+<h3>Is there a way to automatically generate and export face models ?</h3>
+<p>This requires our <a href="sdk.htm">SDK</a></p>
+<h3>Can I do children with FaceGen ?</h3>
+<p>The age control goes down to age 15, and the photofit works optimally down to about age 12,
+ below which results may vary. We have no near-term plans to extend the range.</p>
+<h3>How do I animate the face ?</h3>
+<p>FaceGen is a static face modelling technology which creates a personalized head mesh along with morph
+  targets for animation. It does not produce any kind of timeline data so another program must be used
+  to do the actual animation.</p>
+<h3>What is the statistical basis for the slider controls ?</h3>
+<p>The <span>Shape</span> and <span>Color</span> tab sliders are linear projections into our 'face space' consisting of 50 dimensions of
+    symmetric shape, 30 dimensions of asymmetric shape and 50 dimensions of symmetric color. The age,
+    gender and racial group sliders are linear regressions on our data set in that space. The
+    caricature and asymmetry sliders are difference magnitudes from the mean for the given age, gender
+    and racial group. Our face space was created by principal components analysis from a data set consisting
+    of 273 high-resolution 3D face scans
+    <a href="download/scanDemographicsForPublic.zip">(scan demographics)</a>. We have not published
+    a paper detailing our methodology.
+</section>
+
+<footer class="footer">
+<div style="height:1px"></div>
+<p>&copy; Singular Inversions 2022
+<div style="height:1px"></div>
+</footer>
+</body>
+</html>
